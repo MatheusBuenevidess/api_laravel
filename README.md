@@ -7,8 +7,7 @@
 1. `composer create-project laravel/laravel hcode-api-users`
 2. `cp .env.example .env`
 3. `php artisan key:generate`
-4. `php artisan serve`
-5. `php artisan migrate`
-6. `php artisan db:seed`
-
+4. `php artisan migrate`
+5. `php artisan db:seed`
+6. `php artisan serve`
 
