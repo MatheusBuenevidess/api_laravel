@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
+    
     /**
      * Seed the application's database.
      *
@@ -11,9 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
 
-        DB::insert('insert into users (name, email) values (?,?)', ['teste1', 'teste1@gmail.com']);
-        DB::insert('insert into users (name, email) values (?,?)', ['teste2', 'teste2@gmail.com']);
+        
+        DB::table('users')->insert([
+            'name' => Str::random(10),
+            'email'=> Str::random(10).'@gmail.com',
+        ]);
+        DB::table('users')->insert([
+            'name' => Str::random(10),
+            'email'=> Str::random(10).'@yahoo.com',
+        ]);
     }
 }
