@@ -12,5 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UserSeeder::class);
+
+        DB::insert('insert into users (name, email) values (?,?)', ['teste1', 'teste1@gmail.com']);
+        DB::insert('insert into users (name, email) values (?,?)', ['teste2', 'teste2@gmail.com']);
     }
 }
